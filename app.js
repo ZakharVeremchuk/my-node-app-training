@@ -12,7 +12,20 @@ app.all('/anything', (req, res, next) => {
     next();
 })
 
-// app.get('/', (req, res) => {
+
+app
+    .route('/blog')
+    .get((req, res) => {
+        res.send('Get a list of blog')
+    })
+    .post((req, res) => {
+        res.send('Add a record  to blog')
+    })
+    .put((req, res) => {
+        res.send('Update blog')
+    })
+
+1// app.get('/', (req, res) => {
 //     res.send('Hello World!');
 // })
 
